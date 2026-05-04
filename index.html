@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Portfolio | Innovate</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CDN Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Custom Cursor Glow -->
+    <div class="cursor-glow"></div>
+
+    <!-- Animated Background -->
+    <div id="particles-js"></div>
+    <div class="glow-container">
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
+    </div>
+    
+    <div class="app-container">
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+            </div>
+            <div class="nav-links">
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#blog">Blog</a>
+            </div>
+            <div class="user-action">
+                <!-- Theme Toggle -->
+                <button id="theme-toggle" class="icon-btn">
+                    <i class="fas fa-sun light-icon"></i>
+                    <i class="fas fa-moon dark-icon"></i>
+                </button>
+                <a href="#contact" class="btn-contact">
+                    <i class="fas fa-paper-plane"></i> Let's Talk
+                </a>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <main id="home" class="hero section">
+            <div class="hero-content sr-bottom">
+                <div class="badge availability-badge">
+                    <div class="green-dot"></div>
+                    <span>Available for Hire</span>
+                </div>
+                <h1>One-click for <br><span class="text-gradient typed-text"></span></h1>
+                <p>Dive into intelligent systems, where cutting-edge machine learning technology meets real-world business solutions.</p>
+                <div class="cta-group">
+                    <a href="#projects" class="btn btn-outline">View Projects ↗</a>
+                    <a href="#contact" class="btn btn-primary">Hire Me</a>
+                </div>
+            </div>
+        </main>
+
+        <!-- Stats & Credibility Section -->
+        <section id="stats" class="section stats-section sr-bottom">
+            <div class="stats-grid">
+                <div class="stat-card" data-tilt>
+                    <i class="fas fa-code-branch"></i>
+                    <h3 id="stat-repos">10+</h3>
+                    <p>AI Projects</p>
+                </div>
+                <div class="stat-card" data-tilt>
+                    <i class="fas fa-star"></i>
+                    <h3 id="stat-stars">50+</h3>
+                    <p>GitHub Stars</p>
+                </div>
+                <div class="stat-card" data-tilt>
+                    <i class="fas fa-globe"></i>
+                    <h3>5</h3>
+                    <p>Domains Mastered</p>
+                </div>
+                <div class="stat-card cert-card" data-tilt>
+                    <i class="fas fa-certificate"></i>
+                    <h3>Certified</h3>
+                    <p>DeepLearning.AI</p>
+                </div>
+            </div>
+            <div class="github-heatmap sr-bottom">
+                <h3>GitHub Contributions</h3>
+                <img id="heatmap-img" src="https://ghchart.rshah.org/10b981/ivikashsharma999-glitch" alt="GitHub Heatmap">
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section about-section sr-bottom">
+            <div class="section-header">
+                <h2>About Me</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-image" data-tilt>
+                    <div class="img-placeholder">
+                        <i class="fas fa-user-astronaut"></i>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h3>Passionate AI Engineer</h3>
+                    <p>I am driven by the immense potential of Artificial Intelligence to solve complex, real-world problems. My journey in tech is fueled by an insatiable curiosity and a desire to build systems that learn, adapt, and improve.</p>
+                    <p>Whether it's fine-tuning large language models, deploying scalable computer vision pipelines, or architecting robust ML infrastructure, I thrive at the intersection of innovative research and practical engineering.</p>
+                    <a href="#" class="btn btn-outline download-cv">
+                        <i class="fas fa-download"></i> Download Resume
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section skills-section sr-bottom">
+            <div class="section-header">
+                <h2>Skills & Tech Stack</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="radar-container" data-tilt>
+                    <canvas id="skillsRadar"></canvas>
+                </div>
+                <div class="skills-bars">
+                    <div class="skill-category">
+                        <h4>ML Frameworks & Cloud</h4>
+                        <div class="skill-tags">
+                            <span class="tag"><i class="fas fa-fire"></i> PyTorch</span>
+                            <span class="tag"><i class="fas fa-brain"></i> TensorFlow</span>
+                            <span class="tag">🤗 HuggingFace</span>
+                            <span class="tag"><i class="fas fa-link"></i> LangChain</span>
+                            <span class="tag"><i class="fab fa-aws"></i> AWS</span>
+                            <span class="tag"><i class="fab fa-google"></i> GCP</span>
+                        </div>
+                    </div>
+                    <div class="skill-category mt-4">
+                        <h4>Languages & Tools</h4>
+                        <div class="skill-bar-container">
+                            <div class="skill-info">
+                                <span>Python</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="skill-track"><div class="skill-fill" style="width: 95%;"></div></div>
+                        </div>
+                        <div class="skill-bar-container">
+                            <div class="skill-info">
+                                <span>JavaScript / TypeScript</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-track"><div class="skill-fill" style="width: 85%;"></div></div>
+                        </div>
+                        <div class="skill-bar-container">
+                            <div class="skill-info">
+                                <span>SQL & NoSQL</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-track"><div class="skill-fill" style="width: 80%;"></div></div>
+                        </div>
+                        <div class="skill-bar-container">
+                            <div class="skill-info">
+                                <span>Docker & Kubernetes</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="skill-track"><div class="skill-fill" style="width: 75%;"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section projects-section sr-bottom">
+            <div class="section-header">
+                <h2>Projects Showcase</h2>
+                <div class="project-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="nlp">NLP</button>
+                    <button class="filter-btn" data-filter="cv">Computer Vision</button>
+                    <button class="filter-btn" data-filter="genai">Gen AI</button>
+                </div>
+            </div>
+            <div class="projects-grid" id="github-projects-container">
+                <!-- Projects will be fetched via JS -->
+                <div class="loading-spinner"><i class="fas fa-circle-notch fa-spin"></i> Loading GitHub Projects...</div>
+            </div>
+        </section>
+
+        <!-- Experience Timeline -->
+        <section id="experience" class="section timeline-section sr-bottom">
+            <div class="section-header">
+                <h2>Experience & Journey</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item" data-tilt>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2024 - Present</span>
+                        <h3>Senior AI Engineer</h3>
+                        <h4>Tech Innovators Inc.</h4>
+                        <p>Leading the development of highly scalable GenAI applications, optimizing LLM inference pipelines, and architecting RAG (Retrieval-Augmented Generation) systems for enterprise clients.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-tilt>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2022 - 2024</span>
+                        <h3>Machine Learning Researcher</h3>
+                        <h4>Data Sciences Lab</h4>
+                        <p>Developed state-of-the-art computer vision models for medical imaging. Published 2 papers on attention mechanisms in deep learning.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-tilt>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2020 - 2022</span>
+                        <h3>Software Developer Intern</h3>
+                        <h4>StartupHub</h4>
+                        <p>Built robust backend APIs using Node.js and Python. Transitioned into data engineering and early ML prototyping.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog" class="section blog-section sr-bottom">
+            <div class="section-header">
+                <h2>Case Studies & Articles</h2>
+            </div>
+            <div class="blog-grid">
+                <div class="blog-card" data-tilt>
+                    <div class="blog-img" style="background: linear-gradient(45deg, #10b981, #3b82f6);"></div>
+                    <div class="blog-content">
+                        <span class="blog-tag">Gen AI</span>
+                        <h3>Demystifying Retrieval-Augmented Generation (RAG)</h3>
+                        <p>A deep dive into how RAG enhances LLMs by connecting them to external knowledge bases.</p>
+                        <a href="#" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="blog-card" data-tilt>
+                    <div class="blog-img" style="background: linear-gradient(45deg, #8b5cf6, #ec4899);"></div>
+                    <div class="blog-content">
+                        <span class="blog-tag">Computer Vision</span>
+                        <h3>Real-time Object Detection with YOLOv8</h3>
+                        <p>Implementing and optimizing YOLOv8 for edge devices in smart city applications.</p>
+                        <a href="#" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section sr-bottom">
+            <div class="section-header">
+                <h2>Let's Collaborate</h2>
+            </div>
+            <div class="contact-grid">
+                <div class="calendly-container" data-tilt>
+                    <h3>Book a Discovery Call</h3>
+                    <!-- Calendly inline widget placeholder -->
+                    <div class="calendly-inline-widget" data-url="https://calendly.com/" style="min-width:320px;height:400px;">
+                        <div class="calendly-placeholder">
+                            <i class="far fa-calendar-alt fa-3x"></i>
+                            <p>Calendly Embed Area<br><small>(Replace data-url in HTML with your link)</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-container" data-tilt>
+                    <h3>Send a Message</h3>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="from_name" name="from_name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="reply_to" name="reply_to" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Send Message <i class="fas fa-paper-plane"></i></button>
+                        <div id="form-status" class="mt-2 text-center"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p>&copy; 2026 AI Portfolio. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
